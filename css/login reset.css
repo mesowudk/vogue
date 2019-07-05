@@ -1,0 +1,26 @@
+
+@charset "UTF-8";
+
+*{margin:0; padding:0; border:none; box-sizing:border-box;}
+li{font-size:14px; list-style:none;}
+a{text-decoration:none; color:black;}
+img{vertical-align:bottom;}
+input,select{border:1px solid rgb(204, 203, 203);}
+
+
+
+
+/* <script>
+$(function(){
+    $(window).on("resize",function(){
+        if(window.innerWidth>720){
+            $("nav").show;
+        }
+    });
+    // $("nav").hide();
+    $("#tgl_menu").on("click",function(){
+        $("nav").slideToggle();
+        $("#search_form").hide();
+    });
+});
+</script>  */

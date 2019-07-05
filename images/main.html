@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style3.css">
+        
+    <script src="js/jquery-3.4.1.min.js"></script>
+    
+    <title>vogue</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo|Playfair+Display&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div id="wrap">
+    <!-- header -->
+    <header>
+            
+        <div id="head">
+                <!-- sns -->
+                <div id="sns">
+                    <ul>
+                        <li id="instar"><a href="#"><img src="images/instar.png" alt="인스타"></a><span id="sns_txt1">instargram</span></li>
+                        <li id="facebook"><a href="#"><img src="images/facebook.png" alt="페이스북"></a><span id="sns_txt2">facebook</span></li>
+                        <li id="twiter"><a href="#"><img src="images/twiter.png" alt="트위터"></a><span id="sns_txt3">twiter</span></li>
+                        <li id="youtube"><a href="#"><img src="images/youtube.png" alt="유투브"></a><span id="sns_txt4">youtube</span></li>
+                        <li id="kakao"><a href="#"><img src="images/kakao.png" alt="카카오"></a><span id="sns_txt5">kakao</span></li>
+                    </ul>
+                </div>
+
+                <!-- tgl_menu -->
+                <div id="tgl_menu">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+
+                <!-- right_menu-->
+                <div id="right_menu">
+                    <ul>
+                        <li id="side_menu">SIDE MENU
+                            <div id="side_menu_box">
+                                <P><a href="#">회사소개</a></P>
+                                <br>
+                                <P>광고 및 제휴</P>
+                                <br>
+                                <P>개인정보 처리방침</P>
+                            </div>
+                        </li>
+                        <li>SUBSCRIBE</li>
+                        <li id="login">LOGIN</li>
+                    </ul>
+                </div> 
+
+                <!--serch icon & login icon-->
+                <div id="icons">
+                    <div class="search_icon"><img src="images/search_icon.png" alt="서치아이콘"></div>
+                    <div id="login_icon"><img src="images/login_icon.png" alt="로그인아이콘"></div>
+                </div>
+
+                <!-- madal _login form -->
+                <div id="modal">
+                <form action="login" method="POST">
+                    <fieldset id="fieldset01">
+                        <legend>LOGIN</legend>
+                        <input type="text" name="id" value="ID" ></br>
+                        <input type="text" name="pw" value="PASSWORD" ></br>
+                        <input type="submit" value="login">
+                    </fieldset>
+                    <fieldset id="fieldset02"> 
+                        <ul>                         
+                            <li><input type="checkbox" name="">자동 로그인</li>
+                            <li><a href="#">아이디 찾기</a></li> 
+                            <li><a href="#">비밀번호 찾기</a></li>
+                        </ul>
+                    </fieldset>  
+                    <br>
+                    <br>
+                    <br>
+                    <p id="join">가입하고 혜택받으세요!&nbsp;<a href="login.html"> 회원가입</a></p>
+                    <br>
+                    <br>
+                    <br>
+                    
+                    <div id="social_login"><div></div>소셜 로그인<div></div></div>
+                    
+                    <div id="sns_login">
+                        <input type="text" value="INSTAGRAM">
+                        <input type="text" value="FACEBOOK">
+                        <input type="text" value="KAKAO">
+                    </div>
+
+                    <div id="close_btn">CLOSE</div>
+                    
+                </form>
+                </div>
+           
+            <!-- 모달 스크립트 -->
+            <script>
+                $(function(){
+                    $("#modal").hide();
+                    $("#login,#login_icon").on("click",function(){
+                        $("#modal").show();
+                        $("#close_btn").on("click",function(){
+                            $("#modal").hide();
+                        
+                        });
+
+                    });
+
+                });
+            </script>
+
+        </div>
+        
+        <!-- logo -->
+        <div id="logo">
+                <img src="images/logo.png" alt="로고">
+        </div>
+
+
+        <!-- 토글메뉴 스크립트 -->
+        <!-- <script>
+        $(function(){
+            $("#tgl_form").hide();
+            $("#tgl_menu").on("click",function(){
+                $("#tgl_form").slideToggle();
+            });
+        });
+        </script>
+          -->
+
+        
+         
+        <!-- 모바일 헤더 -->
+        <div id="mobile_header">
+            
+            <!-- tgl_menu -->
+            <!-- <div id="tgl_menu1">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+            </div> -->
+            
+            <!-- logo -->
+            <!-- <div id="logo1">
+                    <img src="images/logo1.png" alt="로고">
+            </div> -->
+
+            <!--serch icon & login icon-->
+            <!-- <div id="icons1">
+                    <div><img src="images/search_icon.png" alt="서치아이콘"></div>
+                    <div><img src="images/login_icon.png" alt="로그인아이콘"></div>
+            </div>
+           -->
+        </div>
+       
+        <!-- 검색창  -->
+        <div id="search_form"><input type="text" ></div>  
+        <!-- 검색창 스크립트  -->
+        <script>
+            $(function(){
+                $("#search_form").hide();
+                $(".search_icon").on("click",function(){
+                   $("#search_form").slideToggle(); 
+                   $("nav").hide();
+                });
+            });
+        </script>
+       
+       
+        <!-- navi -->
+        <nav>
+            <ul id="navi">
+                <li><a href="#">FASHION</a></li>
+                <li><a href="#">BEAUTY</a></li>
+                <li><a href="#">LIVING</a></li>
+                <li><a href="#">PEOPLE</a></li>
+                <li><a href="#">VIDEO</a></li>
+                <li><a href="#">RUNWAY</a></li>
+                <li><a href="#">VOGUE MARKET</a></li>
+                <li class="search_icon"><a href="#"><img src="images/search_icon.png" alt="검색아이콘"></a></li>
+               
+            </ul>
+
+            <ul id="sns2">
+                <li><a href="#"><img src="images/instar.png" alt="인스타"></a></li>
+                <li><a href="#"><img src="images/facebook.png" alt="페이스북"></a></li>
+                <li><a href="#"><img src="images/twiter.png" alt="트위터"></a></li>
+                <li><a href="#"><img src="images/youtube.png" alt="유투브"></a></li>
+                <li><a href="#"><img src="images/kakao.png" alt="카카오"></a></li>
+            </ul>
+
+            <ul id="magarzine">
+                <li>
+                    <img src="images/magarzine01.jpg" alt="잡지">
+                    
+                    <p>정기구독을 신청하면 최대 30% 할인혜택을 드립니다!</p>
+                    <p><a href="#">정기 구독 신청</a></p>
+                    <p><a href="#">회사소개/&nbsp;&nbsp; 광고 및 제휴/&nbsp;&nbsp;&nbsp;<strong>개인정보 처리방침</strong></a></p>
+                </li>
+            </ul>
+        </nav> 
+        <!-- 토글메뉴 스크립트 -->
+            <script>
+                $(function(){
+                    $(window).on("resize",function(){
+                        if(window.innerWidth>720){
+                            $("nav").show;
+                        }
+                    });
+                    $("nav").hide();
+                    $("#tgl_menu").on("click",function(){
+                        $("nav").slideToggle();
+                        $("#search_form").hide();
+                    });
+                });
+            </script> 
+    </header>
+   
+        <div id="line"></div>
+
+        <div id="sub_title">
+           
+                <h1>fashion</h1>
+                <ul>
+                    <li id="red"><a href="#">전체</a></li>
+                    <li><a href="#">트렌드</a></li>
+                    <li><a href="#">쇼핑</a></li>
+                    <li><a href="#">피플</a></li>
+                    <li><a href="#">화보</a></li>
+                </ul>
+            
+        </div>
+
+
+        <!-- section -->
+        <section>
+            
+                <div class="full_box"> 
+                    <div class="full_contents"><a href="#"><img src="images/the interner.jpg" alt="모델"><p class="p_txt">MODEL</p></a>
+                        <div class="sub_box"></div>
+                    </div>
+                </div>
+                    
+                <div class="full_box clearfix"> 
+                    <div class="contents"><a href="#"><img src="images/model01.jpg" alt=""><p class="p_txt">MODEL</p></a>
+                        <div class="sub_box"></div>
+                    </div>
+                    <div class="contents"><a href="#"><img src="images/model02.jpg" alt=""><p class="p_txt">MODEL</p></a>
+                        <div class="sub_box"></div>
+                    </div>
+                    <div class="contents"><a class="contents3" href="#"><img src="images/model03.jpg" alt=""><p class="p_txt">MODEL</p></a>
+                        <div class="sub_box"></div>
+                    </div>
+                </div> 
+
+                <div class="full_box"> 
+                    <div class="full_contents"><a href="#"><img src="images/model.jpg" alt="모델"><p class="p_txt">MODEL</p></a>
+                        <div class="sub_box"></div>
+                    </div>
+                </div>
+
+                <div class="full_box clearfix"> 
+                    <div class="contents"><a href="#"> <img src="images/model04.jpg" alt=""><p class="p_txt">MODEL</p></a>
+                        <div class="sub_box"></div>
+                    </div>
+                    <div class="contents"><a href="#"> <img src="images/model05.jpg" alt=""><p class="p_txt">MODEL</p></a>
+                        <div class="sub_box"></div>
+                    </div>
+                    <div class="contents"><a  class="contents3" href="#"> <img src="images/model06.jpg" alt=""><p class="p_txt">MODEL</p></a>
+                        <div class="sub_box"></div>
+                    </div>
+                </div> 
+
+                <div class="full_box"> 
+                    <div class="full_contents"><a href="#"><img src="images/the interner.jpg" alt="모델"><p class="p_txt">MODEL</p></a>
+                        <div class="sub_box"></div>
+                    </div>
+                </div>
+           
+                <div class="full_box clearfix"> 
+                    <div class="contents"><a href="#"> <img src="images/model07.jpg" alt=""><p class="p_txt">MODEL</p></a>
+                        <div class="sub_box"></div>
+                    </div>
+                    <div class="contents"><a href="#"> <img src="images/model08.jpg" alt=""><p class="p_txt">MODEL</p></a>
+                        <div class="sub_box"></div>
+                    </div>
+                    <div class="contents"><a class="contents3" href="#"> <img src="images/model09.jpg" alt=""><p class="p_txt">MODEL</p></a>
+                        <div class="sub_box"></div>
+                    </div>
+                </div> 
+               
+              
+        </section>
+                
+        <!-- 푸터 -->
+        <div id="footer">
+            <div id="footer_txt">
+                <img src="images/logo_white.png" alt="">
+                <p>WWW.VOGUE.COM Ⓒ CONDÉNAST ASIA PACIFIC. INC. ALL RIGHTS RESERVED. VOGUE.COM KOREA IS OPERATED BY DOOSAN MAGAZINE.</p>
+                <p><a href="#">개인정보 처리방침</a></p>
+            </div>
+        </div>
+     
+
+
+    </div>
+</body>
+
+
+</html>
