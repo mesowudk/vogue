@@ -18,20 +18,70 @@
     <div id="wrap">
         <header>
             <div id="header">
-                <div id="logo"><a href="sub_index.html"><img src="images/logo.png" alt="로고"></a></div>
+                <div id="logo"><a href="main.html"><img src="images/logo.png" alt="로고"></a></div>
 
                 <div id="nav">
                     <ul>
-                        <li>로그인</li>
-                        <li>회원가입</li>
-                        <li>마이페이지▽</li>
-                        <li>kr▽</li>
+                        <li id="login"><a href="#">로그인</a></li>
+                        <li><a href="login.html">회원가입</a></li>
+                        <li><a href="#">마이페이지▽</a></li>
+                        <li><a href="#">kr▽</a></li>
                     </ul>
                 </div>
             </div>
 
         </header>
 
+      
+        <!-- madal _login form -->
+        <div id="modal">
+            <form action="login" method="POST">
+                <fieldset id="fieldset01">
+                    <legend>LOGIN</legend>
+                    <input type="text" name="id" value="ID" ></br>
+                    <input type="text" name="pw" value="PASSWORD" ></br>
+                    <input type="submit" value="login">
+                </fieldset>
+                <fieldset id="fieldset02"> 
+                    <ul>                         
+                        <li><input type="checkbox" name="">자동 로그인</li>
+                        <li><a href="#">아이디 찾기</a></li> 
+                        <li><a href="#">비밀번호 찾기</a></li>
+                    </ul>
+                </fieldset>  
+                <br>
+                <br>
+                <br>
+                <p id="join">가입하고 혜택받으세요!&nbsp;<a href="login.html"> 회원가입</a></p>
+                <br>
+                <br>
+                <br>
+                
+                <div id="social_login"><div></div>소셜 로그인<div></div></div>
+                
+                <div id="sns_login">
+                    <input type="text" value="INSTAGRAM">
+                    <input type="text" value="FACEBOOK">
+                    <input type="text" value="KAKAO">
+                </div>
+
+                <div id="close_btn">CLOSE</div>
+                </form>
+            </div>
+           
+        <!-- 모달 스크립트 -->
+        <script>
+            $(function(){
+                $("#modal").hide();
+                $("#login").on("click",function(){
+                    $("#modal").show();
+                    $("#close_btn").on("click",function(){
+                        $("#modal").hide();
+                    });
+                });
+            });
+        </script>
+       
         <section>
         <div id=section>
         <form action="#" metohd="post">

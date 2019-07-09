@@ -10,6 +10,57 @@
 #nav li{display:inline-block; font-size:13px; margin-right:10px;}
 #nav li:nth-child(4){margin-right:none;}
 
+
+/* LOGIN form */
+#modal{background:rgba(80,80,80,0.5); width:100%; height:100%;
+    position:fixed; left:0; top:0; z-index:10;} 
+#modal>form{width:50%; height:550px; margin:0 auto; background:white;
+position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);}
+#fieldset01{text-align:center;}
+legend{font-size:45px; font-weight:bold; color:goldenrod;}
+
+/* fiedldset01 */
+#fieldset01 input[value="ID"]{margin-top:10px;}
+#fieldset01 input[type="text"]{font-size:12px; padding:10px 20px; border:1px solid gray; margin-bottom:5px;}
+#fieldset01 input[type="submit"]{padding:15px;}
+#fieldset01 input[type="submit"]:hover{background:pink; color:black; cursor: pointer;}
+#fieldset01 input[value="login"]{font-weight:400; color:#333;}
+
+/* fieldset02 */
+#fieldset02{text-align:center; margin-top:10px;}
+#fieldset02 li{display:inline-block; font-size:13px;}
+#fieldset02 li:nth-child(2){margin-left:8.181818181818182%;}
+#fieldset02 li:nth-child(3){margin-left:10px;}
+#fieldset02 li:nth-child(2):hover{color:black; font-weight:bold;}
+#fieldset02 li:nth-child(3):hover{color:black; font-weight:bold;}
+
+form #join{text-align:center; font-size:15px; color:#333;}
+form #join a{font-size:14px; font-weight:bold; color:black;}
+form #join a:hover{font-size:16px;}
+
+/* social_login */
+#social_login{text-align:center; font-size:20px; color:#333; font-weight:bold;}
+#social_login div:nth-child(1){float:left; width:30%; height:1px; background:gray; margin-left:3.636363636363636%;}
+#social_login div:nth-child(2){float:right; width:30%; height:1px; background:gray; margin-right:3.636363636363636%;}
+
+/* sns_login */
+#sns_login input{display:block; width:200px; border:1px solid gray; padding:10px; border-radius:10px;}
+
+#sns_login input[type]{margin:10px auto; cursor: pointer;}
+#sns_login [value]{font-size:10px;}
+#sns_login input:nth-child(1){background:url(../images/instar.png) no-repeat center center ; }
+#sns_login input:nth-child(2){background:url(../images/facebook.png) no-repeat center center; }
+#sns_login input:nth-child(3){background:url(../images/kakao.png) no-repeat center center; }
+
+#sns_login input:nth-child(1):hover{background:url(../images/instar02.png) no-repeat center center; }
+#sns_login input:nth-child(2):hover{background:url(../images/facebook02.png) no-repeat center center; }
+#sns_login input:nth-child(3):hover{background:url(../images/kakao02.png) no-repeat center center; }
+
+#close_btn{position:absolute; right:10px; bottom:10px; padding:6px; 
+     color:#333; cursor:pointer; border-radius:2px;}
+#close_btn:hover{border:2px solid #333; transition:0.2s;}
+
+
 /* section */
 #section{width:50%; margin:0 auto;}
 fieldset{border:none;}
@@ -49,7 +100,7 @@ footer img{position:absolute; left:50%; transform:translateX(-50%); top:40px;}
 
 
 
-
+/* 테블릿 */
 @media(max-width:960px){
 
 /* header */
@@ -71,16 +122,34 @@ span{float:right; margin-right:30px;}
 
 .article{width:80%; margin:20px auto 0; padding-bottom:40px;}
 
-        }
+}
 
 
-
+/* 모바일 */
 @media(max-width:690px){
 
 /* header */
 #header{width:100%; margin:10px auto;padding:0px 3%;}
 #nav li{font-size:11px; margin-right:3px;}
 #header #logo img{width:100px;}
+
+/* LOGIN form */
+#modal>form{width:90%; height:90%; margin:0 auto; background:white;}
+#modal legend{font-size:25px;}
+
+#modal #fieldset01 input[value="ID"]{margin-top:5px;}
+#modal #fieldset01 input[type="text"]{font-size:12px; padding:10px;}
+
+#modal #fieldset02{margin-top:0px;}
+
+#modal form #join{font-size:13px;}
+#modal form #join a{font-size:12px}
+#modal form #join a:hover{font-size:13px;}
+
+#modal #social_login{ font-size:15px;}
+#modal #sns_login input{width:150px; padding:5px;}
+
+
 /* section */
 #section{width:95%; margin-top:30px;}
 legend{font-size:30px; margin-bottom:30px;}
@@ -101,7 +170,7 @@ footer{height:100px;}
 footer img{width:150px; top:30px;}
 #small_box{width:65px;}
         
-       }
+}
 
 
 

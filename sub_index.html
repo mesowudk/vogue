@@ -6,9 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="css/sub_style.css">
         
     <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/common.js"></script>
     
     <title>vogue</title>
 
@@ -22,83 +23,82 @@
     <header>
             
         <div id="head">
-                <!-- sns -->
-                <div id="sns">
-                    <ul>
-                        <li id="instar"><a href="#"><img src="images/instar.png" alt="인스타"></a><span id="sns_txt1">instargram</span></li>
-                        <li id="facebook"><a href="#"><img src="images/facebook.png" alt="페이스북"></a><span id="sns_txt2">facebook</span></li>
-                        <li id="twiter"><a href="#"><img src="images/twiter.png" alt="트위터"></a><span id="sns_txt3">twiter</span></li>
-                        <li id="youtube"><a href="#"><img src="images/youtube.png" alt="유투브"></a><span id="sns_txt4">youtube</span></li>
-                        <li id="kakao"><a href="#"><img src="images/kakao.png" alt="카카오"></a><span id="sns_txt5">kakao</span></li>
-                    </ul>
-                </div>
+            <!-- sns -->
+            <div id="sns">
+                <ul>
+                    <li id="instar"><a href="#"><img src="images/instar.png" alt="인스타"></a><span id="sns_txt1">instargram</span></li>
+                    <li id="facebook"><a href="#"><img src="images/facebook.png" alt="페이스북"></a><span id="sns_txt2">facebook</span></li>
+                    <li id="twiter"><a href="#"><img src="images/twiter.png" alt="트위터"></a><span id="sns_txt3">twiter</span></li>
+                    <li id="youtube"><a href="#"><img src="images/youtube.png" alt="유투브"></a><span id="sns_txt4">youtube</span></li>
+                    <li id="kakao"><a href="#"><img src="images/kakao.png" alt="카카오"></a><span id="sns_txt5">kakao</span></li>
+                </ul>
+            </div>
 
-                <!-- right_menu-->
-                <div id="right_menu">
-                    <ul>
-                        <li id="side_menu">SIDE MENU
-                            <div id="side_menu_box">
-                                <P>회사소개</P>
-                                <br>
-                                <P>광고 및 제휴</P>
-                                <br>
-                                <P>개인정보 처리방침</P>
-                            </div>
-                        </li>
-                        <li>SUBSCRIBE</li>
-                        <li id="login">LOGIN</li>
-                    </ul>
-                </div> 
-
-                <!-- madal _login form -->
-                <div id="modal">
-                    <form action="login" method="POST">
-                        <fieldset id="fieldset01">
-                            <legend>LOGIN</legend>
-                            <input type="text" name="id" value="ID" ></br>
-                            <input type="text" name="pw" value="PASSWORD" ></br>
-                            <input type="submit" value="login">
-                        </fieldset>
-                        <fieldset id="fieldset02"> 
-                            <ul>                         
-                                <li><input type="checkbox" name="">자동 로그인</li>
-                                <li><a href="#">아이디 찾기</a></li> 
-                                <li><a href="#">비밀번호 찾기</a></li>
-                            </ul>
-                        </fieldset>  
-                        <br>
-                        <br>
-                        <br>
-                        <p id="join">가입하고 혜택받으세요!&nbsp;<a href="login.html"> 회원가입</a></p>
-                        <br>
-                        <br>
-                        <br>
-                        
-                        <div id="social_login"><div></div>소셜 로그인<div></div></div>
-                        
-                        <div id="sns_login">
-                            <input type="text" value="INSTAGRAM">
-                            <input type="text" value="FACEBOOK">
-                            <input type="text" value="KAKAO">
+            <!-- right_menu-->
+            <div id="right_menu">
+                <ul>
+                    <li id="side_menu"><a href="#">SIDE MENU</a>
+                        <div id="side_menu_box">
+                            <P>회사소개</P>
+                            <br>
+                            <P>광고 및 제휴</P>
+                            <br>
+                            <P>개인정보 처리방침</P>
                         </div>
+                    </li>
+                    <li><a href="#">SUBSCRIBE</a></li>
+                    <li id="login"><a href="#">LOGIN</a></li>
+                </ul>
+            </div> 
 
-                        <div id="close_btn">CLOSE</div>
-                        </form>
-                </div>
-        
-                <!-- 모달 스크립트 -->
+                <!-- right_menu script -->
                 <script>
                     $(function(){
-                        $("#modal").hide();
-                        $("#login,#login_icon").on("click",function(){
-                            $("#modal").show();
-                            $("#close_btn").on("click",function(){
-                                $("#modal").hide();
-                            
-                            });
+                        $("#side_menu").on("mouseover",function(){
+                            $("#side_menu_box").css("visibility","visible");
+                        });
+
+                        $("#side_menu_box").on("mouseout",function(){
+                            $(this).css("visibility","hidden");
                         });
                     });
-                </script>
+            </script>
+
+            <!-- madal _login form -->
+            <div id="modal">
+                <form action="login" method="POST">
+                    <fieldset id="fieldset01">
+                        <legend>LOGIN</legend>
+                        <input type="text" name="id" value="ID" ></br>
+                        <input type="text" name="pw" value="PASSWORD" ></br>
+                        <input type="submit" value="login">
+                    </fieldset>
+                    <fieldset id="fieldset02"> 
+                        <ul>                         
+                            <li><input type="checkbox" name="">자동 로그인</li>
+                            <li><a href="#">아이디 찾기</a></li> 
+                            <li><a href="#">비밀번호 찾기</a></li>
+                        </ul>
+                    </fieldset>  
+                    <br>
+                    <br>
+                    <br>
+                    <p id="join">가입하고 혜택받으세요!&nbsp;<a href="login.html"> 회원가입</a></p>
+                    <br>
+                    <br>
+                    <br>
+                    
+                    <div id="social_login"><div></div>소셜 로그인<div></div></div>
+                    
+                    <div id="sns_login">
+                        <input type="text" value="INSTAGRAM">
+                        <input type="text" value="FACEBOOK">
+                        <input type="text" value="KAKAO">
+                    </div>
+
+                    <div id="close_btn">CLOSE</div>
+                </form>
+            </div>
         </div>
 
         <div id="header2">
@@ -126,22 +126,10 @@
         <!-- 검색창  -->
         <div id="search_form"><input type="text" placeholder="search..." ></div>  
         
-        <!-- 검색창 스크립트  -->
-        <script>
-            $(function(){
-                $("#search_form").hide();
-                $(".search_icon").on("click",function(){
-                   $("#search_form").slideToggle(); 
-                   $("nav").hide();
-                });
-            });
-        </script>
-       
-       
         <!-- navi -->
         <nav>
             <ul id="navi">
-                <li><a href="#">FASHION</a></li>
+                <li><a href="main.html">FASHION</a></li>
                 <li><a href="#">BEAUTY</a></li>
                 <li><a href="#">LIVING</a></li>
                 <li><a href="#">PEOPLE</a></li>
@@ -170,16 +158,6 @@
                 </li>
             </ul>
         </nav> 
-        <!-- 토글메뉴 스크립트 -->
-             <script>
-              $(function(){
-                $("nav").hide();
-                $("#tgl_menu").on("click",function(){
-                    $("nav").slideToggle();
-                    $("#search_form").hide();
-                });
-              });
-            </script> 
     </header>
    
         <div id="line"></div>
